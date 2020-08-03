@@ -1,5 +1,57 @@
 include ./common-tp-link.mk
 
+define Device/mercury_mw150r-v10
+  $(Device/tplink-8mlzma)
+  SOC := ar9331
+  DEVICE_VENDOR := Mercury
+  DEVICE_MODEL := MW150R
+  DEVICE_VARIANT := v10
+  TPLINK_HWID := 0x01500010
+  SUPPORTED_DEVICES += mw150r-v10
+endef
+TARGET_DEVICES += mercury_mw150r-v10
+
+define Device/netgear_jnr3300-v1
+  $(Device/tplink-8mlzma)
+  SOC := qca9558
+  DEVICE_VENDOR := Netgear
+  DEVICE_MODEL := JNR3300
+  DEVICE_VARIANT := v1
+  TPLINK_HWID := 0x33000001
+  SUPPORTED_DEVICES += jnr3300-v1
+endef
+TARGET_DEVICES += netgear_jnr3300-v1
+
+define Device/tplink_tl-wr845n-v3
+  $(Device/tplink-8mlzma)
+  SOC := qca9533
+  DEVICE_MODEL := TL-WR845N
+  DEVICE_VARIANT := v3
+  TPLINK_HWID := 0x08450003
+  SUPPORTED_DEVICES += tl-wr845n-v3
+endef
+TARGET_DEVICES += tplink_tl-wr845n-v3
+
+define Device/tplink_tl-wr886n-v2
+  $(Device/tplink-8mlzma)
+  SOC := tp9343
+  DEVICE_MODEL := TL-WR886N
+  DEVICE_VARIANT := v2
+  TPLINK_HWID := 0x08860002
+  SUPPORTED_DEVICES += tl-wr886n-v2
+endef
+TARGET_DEVICES += tplink_tl-wr886n-v2
+
+define Device/tplink_tl-wr941n-v5-cn
+  $(Device/tplink-8m)
+  SOC := ar7240
+  DEVICE_MODEL := TL-WR941N
+  DEVICE_VARIANT := v5 (CN)
+  TPLINK_HWID := 0x09410005
+  SUPPORTED_DEVICES += tl-wr941-v4
+endef
+TARGET_DEVICES += tplink_tl-wr941n-v5-cn
+
 define Device/tplink_archer-a7-v5
   $(Device/tplink-safeloader-uimage)
   SOC := qca9563
@@ -457,7 +509,7 @@ endef
 TARGET_DEVICES += tplink_tl-wdr3600-v1
 
 define Device/tplink_tl-wdr4300-v1
-  $(Device/tplink-8mlzma)
+  $(Device/tplink-16mlzma)
   SOC := ar9344
   DEVICE_MODEL := TL-WDR4300
   DEVICE_VARIANT := v1

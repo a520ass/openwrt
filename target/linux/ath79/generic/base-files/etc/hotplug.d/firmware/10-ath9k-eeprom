@@ -99,6 +99,9 @@ case "$FIRMWARE" in
 	winchannel,wb2000)
 		caldata_extract "art" 0x5000 0x440
 		;;
+	tplink,tl-wr941n-v5-cn)
+		caldata_extract "art" 0x1000 0xeb8
+		;;
 	netgear,wnr2200-8m|\
 	netgear,wnr2200-16m|\
 	pcs,cap324|\
