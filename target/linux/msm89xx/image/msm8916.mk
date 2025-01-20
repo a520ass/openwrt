@@ -21,5 +21,6 @@ define Device/thwc-ufi001c
 	DEVICE_MODEL := ufi001c
 	SOC := msm8916
 	ROOT_BLKDEV := "/dev/mmcblk0p14"
+	CMDLINE := "earlycon console=ttyMSM0,115200 root=/dev/mmcblk0p14 rw rootwait"
 endef
 TARGET_DEVICES += thwc-ufi001c
