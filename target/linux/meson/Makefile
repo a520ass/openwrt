@@ -9,7 +9,7 @@ ARCH:=aarch64
 BOARD:=meson
 BOARDNAME:=Amlogic Meson SoCs
 FEATURES:=ext4 usb gpio fpu boot-part rootfs-part squashfs audio display
-SUBTARGETS:=gxbb
+SUBTARGETS:=gxbb gxl
 
 KERNEL_PATCHVER:=6.18
 
