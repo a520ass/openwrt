@@ -9,7 +9,7 @@ define Device/amlogic-p212
   DEVICE_VENDOR := Amlogic
   DEVICE_MODEL := P212
   DEVICE_DTS := meson-gxl-s905x-p212
-  DEVICE_PACKAGES := kmod-fs-f2fs kmod-ledtrig-heartbeat kmod-usb-dwc2 kmod-usb-storage \
+  DEVICE_PACKAGES := kmod-fs-f2fs kmod-usb-dwc2 kmod-usb-storage \
 	kmod-drm-meson kmod-sound-core kmod-sound-soc-meson-gx audio-support
 endef
 TARGET_DEVICES += amlogic-p212
