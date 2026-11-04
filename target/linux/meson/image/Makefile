@@ -9,7 +9,7 @@ include $(INCLUDE_DIR)/image.mk
 define Build/meson-sdcard
 	rm -rf $@.boot $@.bootimg
 	mkdir -p $@.boot
-	$(CP) $(STAGING_DIR_IMAGE)/$(DEVICE_NAME)-boot.scr $@.boot/boot.scr
+	###$(CP) $(STAGING_DIR_IMAGE)/$(DEVICE_NAME)-boot.scr $@.boot/boot.scr
 	$(CP) $(IMAGE_KERNEL) $@.boot/Image
 	$(CP) $(KDIR)/image-$(DEVICE_DTS).dtb $@.boot/dtb
 
