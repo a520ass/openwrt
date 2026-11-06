@@ -22,7 +22,7 @@
 // the gpu in the S905L2 has one pp core less
 // (i.e. only two in total) than the one in the other S905X/W
 &mali {
-	status="okay";
+	status="disabled";
 	interrupts = <GIC_SPI 160 IRQ_TYPE_LEVEL_HIGH>,
 		<GIC_SPI 161 IRQ_TYPE_LEVEL_HIGH>,
 		<GIC_SPI 162 IRQ_TYPE_LEVEL_HIGH>,
@@ -54,6 +54,7 @@
 
 /* GXLX2: DW-HDMI uses G12A-style direct register mapping */
 &hdmi_tx {
+	status = "disabled";
 	compatible = "amlogic,meson-g12a-dw-hdmi";
 	reg = <0x0 0xda800000 0x0 0x10000>;
 };
