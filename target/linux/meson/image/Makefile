@@ -8,8 +8,9 @@ include $(INCLUDE_DIR)/image.mk
 
 define Build/meson-sdcard
 	rm -rf $@.boot $@.bootimg
-	mkdir -p $@.boot
+	mkdir -p $@.boot/extlinux
 	###$(CP) $(STAGING_DIR_IMAGE)/$(DEVICE_NAME)-boot.scr $@.boot/boot.scr
+	$(CP) ./extlinux.conf $@.boot/extlinux/extlinux.conf
 	$(CP) $(IMAGE_KERNEL) $@.boot/Image
 	$(CP) $(KDIR)/image-$(DEVICE_DTS).dtb $@.boot/dtb
 
