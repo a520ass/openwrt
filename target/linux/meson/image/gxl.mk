@@ -36,7 +36,7 @@ define Device/zte-b860av21u
   DEVICE_VENDOR := ZTE
   DEVICE_MODEL := B860AV21U
   DEVICE_DTS := meson-gxl-s905l3-b860av21u
-  DEVICE_PACKAGES := kmod-fs-f2fs \
+  DEVICE_PACKAGES := kmod-fs-f2fs block-mount lsblk blkid \
         kmod-drm-meson kmod-sound-core kmod-sound-soc-meson-gx audio-support
 endef
 TARGET_DEVICES += zte-b860av21u
